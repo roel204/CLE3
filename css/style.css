@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Monsterrat';
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+body {
+    font-family: 'Monsterrat';
+    background-color: #F4F4F4;
+    margin: 0;
+}
+
+.pinboard {
+    border: 5px #D8C7AD solid;
+    background-color: #9F6A45;
+    margin: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pinboardItem {
+    margin: 4vw;
+}
