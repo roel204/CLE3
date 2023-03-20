@@ -10,7 +10,7 @@ body {
 }
 
 .pinboard {
-    border: 5px #D8C7AD solid;
+    border: 15px #D8C7AD solid;
     background-color: #9F6A45;
     margin: 2vw;
     display: flex;
