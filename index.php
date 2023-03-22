@@ -7,30 +7,13 @@
     <title>Senioren in de Zorg</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="icon" href="favicon.png?">
+    <script type="text/javascript" src="js/main.js" defer></script>
 </head>
 <body>
-<header>
-
-</header>
 <main>
-    <section class="pinboard">
-        <section class="pinboardItem">
-ja
-        </section>
-        <section class="pinboardItem">
-nee
-        </section>
-        <section class="pinboardItem">
-misschien
-        </section>
-        <section class="pinboardItem">
-een beetje
-        </section>
+    <section id="pinboard" class="pinboard">
+
     </section>
 </main>
-
-<footer>
-
-</footer>
 </body>
 </html>
