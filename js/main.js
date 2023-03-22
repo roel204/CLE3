@@ -13,9 +13,12 @@ function init()
     imageStijn = document.createElement("img")
     imageMats = document.createElement("img")
     imageLindsey = document.createElement("img")
-    imageRoel.src = "../images/placeholder.png"
-    imageStijn.src = "../images/placeholder.png"
-    imageMats.src = "../images/placeholder.png"
-    imageLindsey.src = "../images/placeholder.png"
+    imageRoel.src = "images/placeholder.png"
+    imageStijn.src = "images/placeholder.png"
+    imageMats.src = "images/placeholder.png"
+    imageLindsey.src = "images/placeholder.png"
+    pinboard.appendChild(imageRoel)
     pinboard.appendChild(imageStijn)
+    pinboard.appendChild(imageMats)
+    pinboard.appendChild(imageLindsey)
 }
