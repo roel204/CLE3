@@ -24,7 +24,7 @@ exit;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Senioren in de Zorg</title>
   <link rel="stylesheet" href="../css/style.css"/>
-  <link rel="icon" href="../images/RH.png">
+  <link rel="icon" href="../img/RH.png">
   <script type="text/javascript" src="mats.js" defer></script>
 </head>
 <body>
