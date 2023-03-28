@@ -7,20 +7,36 @@ body {
     font-family: 'Monsterrat';
     background-color: #F4F4F4;
     margin: 0;
+    position: fixed;
 }
 
 .pinboard {
     border: 15px #D8C7AD solid;
     background-color: #9F6A45;
-    margin: 2vw;
+    margin: 1vw;
+    margin-right: 10vw;
     display: flex;
     flex-wrap: wrap;
+    float: left;
+    position: relative;
 }
 
 .pinboardItem {
-    margin: 4vw;
+    margin: 2vw;
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 18vw;
 }
 
 .clickable {
     cursor: pointer;
+}
+
+.hennie {
+    width: 35vw;
+    position: absolute;
+    bottom: -5vw;
+    right: 0;
 }

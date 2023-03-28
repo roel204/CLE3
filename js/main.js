@@ -8,13 +8,14 @@ let dataUrls = [];
 function init()
 {
     pinboard = document.getElementById("pinboard")
-    imageUrls = ["images/placeholder.png", "images/placeholder.png", "images/placeholder.png", "images/placeholder.png"]
+    imageUrls = ["img/placeholder.png", "img/Zorg_in_de_buurt.png", "img/Veiligheid_in_zorg.png", "img/vragen_over_zorg.png"]
     dataUrls = ["roelMap/rechtInZorg.php", "stijnMap/zorgDichtbij.php", "matsMap/veiligheidInZorg.php", "lindseyMap/algemeneVragen.php"]
 
     for (let imageUrl of imageUrls) {
         const image = document.createElement("img");
         image.src = imageUrl;
         image.classList.add("clickable");
+        image.classList.add('pinboardItem')
         image.setAttribute("data-url", dataUrls[imageUrls.indexOf(imageUrl)]);
         pinboard.appendChild(image);
     }
@@ -23,8 +24,12 @@ function init()
 }
 
 function imageClickHandler(e) {
-    if (e.target.tagName === "IMG") {
-        window.location.href = e.target.getAttribute("data-url");
+    if (e.target.className !== 'hennie') {
+        if (e.target.nodeName === "IMG") {
+            window.location.href = e.target.getAttribute("data-url");
+        }
     }
+
+
 }
 
