@@ -4,12 +4,69 @@
     overflow-y: scroll;
 }
 
-.recht-blok {
-    position: center;
+.recht-block {
     background-color: white;
     width: 75%;
     height: 15%;
     margin: 2% auto;
     border: black solid;
     border-radius: 20px;
+    text-align: center;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border: none;
+    border-radius: 16px;
+    height: 80%;
+    width: 80%;
+    box-shadow: 0 16px 22px 0 rgba(0, 0, 0, 0.6);
+}
+
+.modal[open] {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    outline: none;
+    appearance: none;
+    color: goldenrod;
+    background: none;
+    border: 0;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.modal-content::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 52%, rgba(255, 255, 255, 0) 100%);
+    animation: shiny-animation 5s ease-in-out infinite alternate;
+    background-position-y: 0px;
+}
+
+.clickable {
+    cursor: pointer;
 }

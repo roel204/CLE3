@@ -6,29 +6,34 @@ function getDishes()
 {
     return [
         [
-            "id" => 1,
-            "title" => "Pizza",
-            "image" => "Italian",
+            "id" => "1",
+            "title" => "De waarde van ouder worden.",
+            "description" => "Description 1",
+            "source" => "https://www.rijksoverheid.nl/onderwerpen/ouderenzorg/waardig-ouder-worden",
         ],
         [
-            "id" => 2,
-            "title" => "Kale",
-            "image" => "Dutch",
+            "id" => "2",
+            "title" => "Mensenrechten Verpleeghuis",
+            "description" => "Description 2",
+            "source" => "https://www.waardigheidentrots.nl/verslagen/verpleeghuiszorg-en-mensenrechten-nieuwe-blik-op-menswaardige-zorg/",
         ],
         [
-            "id" => 3,
-            "title" => "Lasagna",
-            "image" => "Italian",
+            "id" => "3",
+            "title" => "Ouderen en Mensenrechten",
+            "description" => "Description 3",
+            "source" => "https://www.amnesty.nl/encyclopedie/ouderen-en-mensenrechten",
         ],
         [
-            "id" => 4,
-            "title" => "Kebab",
-            "image" => "Turkish",
+            "id" => "4",
+            "title" => "Rechtwijzer Senioren",
+            "description" => "Description 4",
+            "source" => "https://www.fnv.nl/cao-sector/senioren/hulp-en-advies/rechtenwijzer-senioren",
         ],
         [
-            "id" => 5,
-            "title" => "Paella",
-            "image" => "Spanish",
+            "id" => "5",
+            "title" => "title 5",
+            "description" => "Description 5",
+            "source" => "Source 5",
         ]
     ];
 }
