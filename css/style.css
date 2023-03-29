@@ -28,9 +28,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     height: 18vw;
-}
-
-.clickable {
     cursor: pointer;
 }
 

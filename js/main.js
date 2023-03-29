@@ -14,7 +14,6 @@ function init()
     for (let imageUrl of imageUrls) {
         const image = document.createElement("img");
         image.src = imageUrl;
-        image.classList.add("clickable");
         image.classList.add('pinboardItem')
         image.setAttribute("data-url", dataUrls[imageUrls.indexOf(imageUrl)]);
         pinboard.appendChild(image);
