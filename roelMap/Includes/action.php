@@ -7,28 +7,28 @@ function getDishes()
     return [
         [
             "id" => 1,
-            "name" => "Pizza",
-            "kitchen" => "Italian",
+            "title" => "Pizza",
+            "image" => "Italian",
         ],
         [
             "id" => 2,
-            "name" => "Kale",
-            "kitchen" => "Dutch",
+            "title" => "Kale",
+            "image" => "Dutch",
         ],
         [
             "id" => 3,
-            "name" => "Lasagna",
-            "kitchen" => "Italian",
+            "title" => "Lasagna",
+            "image" => "Italian",
         ],
         [
             "id" => 4,
-            "name" => "Kebab",
-            "kitchen" => "Turkish",
+            "title" => "Kebab",
+            "image" => "Turkish",
         ],
         [
             "id" => 5,
-            "name" => "Paella",
-            "kitchen" => "Spanish",
+            "title" => "Paella",
+            "image" => "Spanish",
         ]
     ];
 }

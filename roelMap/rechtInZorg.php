@@ -1,4 +1,3 @@
-
 <?php
 //Require functions for actions
 require_once "includes/action.php";
@@ -14,4 +13,4 @@ if (!isset($_GET['id'])) {
 header("Content-Type: application/json");
 echo json_encode($data);
 exit;
-?>
+
