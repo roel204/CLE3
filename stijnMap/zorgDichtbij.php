@@ -2,7 +2,18 @@
 //Require functions for actions
 require_once "includes/action.php";
 
-?>3
+//Based on the existence of the GET parameter, 1 of the 2 functions will be called
+if (!isset($_GET['id'])) {
+    $data = getLocations();
+} else {
+    $data = getLocationDetails($_GET['id']);
+}
+
+//Set the header & output JSON so the client will know what to expect.
+header("Content-Type: application/json");
+echo json_encode($data);
+exit;
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,11 +32,19 @@ require_once "includes/action.php";
 <main>
   <section class="pinboard">
     <section class="bedieningspaneel">
-        <select name="locaties" id="locaties">
-
-        </select>
+        <select name="locaties" id="locaties"></select>
+        <button name="buttonZiekenhuis" id="buttonZiekenhuis">Ziekenhuis</button>
+        <button name="buttonApotheek" id="buttonApotheek">Apotheek</button>
+        <button name="buttonHuisarts" id="buttonHuisarts">Huisarts</button>
     </section>
+      <section class="locatieInfo">
+          <div id="info"></div>
+          <a href="" id="locationLink">Bezoek website</a>
+      </section>
   </section>
+    <section>
+        <img class="hennie" src="../img/hennie.png">
+    </section>
 </main>
 
 <footer>
