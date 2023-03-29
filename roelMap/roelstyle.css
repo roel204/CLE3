@@ -1,0 +1,15 @@
+.list {
+    height: 100%;
+    width: 70%;
+    overflow-y: scroll;
+}
+
+.recht-blok {
+    position: center;
+    background-color: white;
+    width: 75%;
+    height: 15%;
+    margin: 2% auto;
+    border: black solid;
+    border-radius: 20px;
+}
