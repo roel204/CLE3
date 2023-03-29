@@ -19,6 +19,8 @@ body {
     flex-wrap: wrap;
     float: left;
     position: relative;
+    width: 90vw;
+    height: 90vh;
 }
 
 .pinboardItem {

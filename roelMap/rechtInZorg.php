@@ -1,19 +1,12 @@
-
 <?php
-//Require functions for actions
+
 require_once "includes/action.php";
 
-//Based on the existence of the GET parameter, 1 of the 2 functions will be called
 if (!isset($_GET['id'])) {
     $data = getDishes();
 } else {
     $data = getDishDetails($_GET['id']);
 }
-
-//Set the header & output JSON so the client will know what to expect.
-header("Content-Type: application/json");
-echo json_encode($data);
-exit;
 ?>
 
 <!DOCTYPE html>
@@ -28,17 +21,15 @@ exit;
     <script type="text/javascript" src="roel.js" defer></script>
 </head>
 <body>
-<header>
 
-</header>
 <main>
-    <section class="pinboard">
+    <section id="pinboard" class="pinboard">
 
+    </section>
+    <section>
+        <img class="hennie" src="../img/hennie.png" alt="Hennie">
     </section>
 </main>
 
-<footer>
-
-</footer>
 </body>
 </html>
