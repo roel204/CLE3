@@ -46,6 +46,7 @@ function clickHandler(e) {
         dialogTitle.innerText = jsonData.find(obj => obj.id === e.target.dataset.id).title
         dialogDescription.innerHTML = jsonData.find(obj => obj.id === e.target.dataset.id).description
         dialogSource.innerText = jsonData.find(obj => obj.id === e.target.dataset.id).source
+        dialogSource.href = jsonData.find(obj => obj.id === e.target.dataset.id).source
         dialog.showModal()
         closeButton.addEventListener("click", function () {
             dialog.close()
