@@ -1,25 +1,20 @@
 .list {
     height: 100%;
-    width: 60%;
+    width: 100%;
     overflow-y: scroll;
-    direction: rtl; /* Set direction to right-to-left */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    scrollbar-width: thin; /* Set scrollbar width */
-    scrollbar-color: #ccc transparent; /* Set scrollbar color */
+    direction: rtl;
+    overflow-x: hidden;
 }
-
 
 .recht-block {
     background-color: white;
-    width: 90%;
+    width: 55%;
     height: 15%;
-    margin: 2% auto;
+    margin: 2% auto 2% 5vw;
     border: black solid;
     border-radius: 20px;
-    text-align: center;
     display: flex;
-    align-items:center;
-    justify-content:center;
+    justify-content: center;
     position: relative;
 }
 
