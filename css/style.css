@@ -20,7 +20,7 @@ body {
     float: left;
     position: relative;
     width: 90vw;
-    height: 90vh;
+    height: 80vh;
 }
 
 .pinboardItem {
@@ -29,13 +29,43 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 18vw;
+    height: 15vw;
     cursor: pointer;
 }
 
 .hennie {
     width: 35vw;
     position: absolute;
-    bottom: -5vw;
+    bottom: -10vw;
     right: 0;
+}
+
+#talk-box {
+    position: absolute;
+    bottom: -10vh;
+    left: 1vw;
+    width: 75vw;
+    height: 10vh;
+    background-color: #cccccc;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+#talk-box::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -30px;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 15px 30px;
+    border-color: transparent transparent transparent black;
+}
+
+#talk-box h3 {
+    margin-left: 1vw;
 }

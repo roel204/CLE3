@@ -20,6 +20,9 @@ function init()
     }
 
     document.addEventListener("click", imageClickHandler)
+
+    hennieTalk("Hallo, Ik ben Hennie! Uw virtuele gids door deze website. Klik op een van de icoontjes")
+
 }
 
 function imageClickHandler(e) {
@@ -31,4 +34,22 @@ function imageClickHandler(e) {
 
 
 }
+
+function hennieTalk(text) {
+    const box = document.getElementById("box");
+    const message = text;
+    const delay = 69;
+
+    let i = 0;
+    let interval = setInterval(() => {
+        if (message[i] === ' ') {
+            box.innerHTML += '&nbsp;';
+        } else {
+            box.innerText += message[i];
+        }
+        i++;
+        if (i >= message.length) clearInterval(interval);
+    }, delay);
+}
+
 
