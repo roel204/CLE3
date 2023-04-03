@@ -2,7 +2,7 @@
 /**
  * @return array
  */
-function getDishes()
+function getData()
 {
     return [
         [
@@ -46,9 +46,9 @@ function getDishes()
 
 /**
  * @param $id
- * @return mixed
+ * @return array
  */
-function getDishDetails($id)
+function getDetails($id)
 {
     $tags = [
         1 => [

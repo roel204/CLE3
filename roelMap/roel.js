@@ -1,6 +1,6 @@
 window.addEventListener('load', init);
 
-let apiUrl = "http://localhost/CLE3/roelMap/rechtInZorg.php"
+let apiUrl = "rechtInZorg.php"
 let jsonData = [];
 let favoriteItems = [];
 
