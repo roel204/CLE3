@@ -68,17 +68,17 @@
     background-position-y: 0;
 }
 
+#dialog-source {
+    position: relative;
+    z-index: 10000;
+}
+
 .clickable {
     cursor: pointer;
 }
 
 a {
     pointer-events: auto;
-}
-
-#dialog-source {
-    position: relative;
-    z-index: 10000;
 }
 
 .favorite {

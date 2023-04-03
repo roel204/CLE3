@@ -14,32 +14,26 @@ function getData()
         [
             "id" => "2",
             "title" => "Mensenrechten Verpleeghuis",
-            "description" => "Description 2",
+            "description" => "<p>Het College voor de Rechten van de Mens heeft onderzoek gedaan naar de manier waarop ouderen behandeld worden in verpleeghuizen. Het rapport benadrukt dat het belangrijk is dat ouderen met waardigheid en zelfstandigheid behandeld worden. Dit heeft te maken met dagelijkse handelingen die grote invloed hebben op het leven van ouderen. <br> Er zijn twee belangrijke mensenrechten die van toepassing zijn in de verpleeghuiszorg: Het recht om niet vernederd of slecht behandeld te worden en het recht op privacy. Het is extra belangrijk om in verpleeghuizen maatregelen te nemen om de lichamelijke en geestelijke integriteit van ouderen te beschermen. <br> Hierbij moet er ook aandacht zijn voor het vinden van zinvolle bezigheden voor de bewoners. Zorgprofessionals suggereren bijvoorbeeld om levensboeken te maken en bewoners te betrekken bij huishoudelijke taken.</p>",
             "source" => "https://www.waardigheidentrots.nl/verslagen/verpleeghuiszorg-en-mensenrechten-nieuwe-blik-op-menswaardige-zorg/",
         ],
         [
             "id" => "3",
             "title" => "Ouderen en Mensenrechten",
-            "description" => "Description 3",
+            "description" => "<p>Ouderen zijn mensen van 65 jaar en ouder die vaak zorg nodig hebben en beschermd moeten worden tegen misbruik en verwaarlozing. Er zijn juridische kwesties zoals het recht van ouderen op inspraak bij behandeling en bij opname in een verzorgingstehuis en privacy in tehuizen. <br> Er zijn weinig normen voor de bescherming van ouderen, maar het beginsel van gelijkheid stelt dat mensen niet ongeschikt mogen worden verklaard op basis van hun leeftijd. <br> Ouderen in ontwikkelingslanden hebben het moeilijk door de toenemende vergrijzing en gebrek aan voorzieningen. Het netwerk van HelpAge International ondersteunt ouderen in ontwikkelingslanden en stelt dat er meer aandacht moet komen voor mishandeling, oplichting en misdaden waar ouderen slachtoffer van worden. <br> Het aantal ouderen groeit en hoewel er een internationale dag van de ouderen is, is er weinig aandacht voor ouderen in vergelijking met kinderen. Er bestaat geen internationaal verdrag voor de mensenrechten van ouderen.</p>",
             "source" => "https://www.amnesty.nl/encyclopedie/ouderen-en-mensenrechten",
         ],
         [
             "id" => "4",
-            "title" => "Rechtwijzer Senioren",
-            "description" => "Description 4",
-            "source" => "https://www.fnv.nl/cao-sector/senioren/hulp-en-advies/rechtenwijzer-senioren",
+            "title" => "Algemene Ouderdomswet",
+            "description" => "<p>De Algemene Ouderdomswet (AOW) is een regeling van de Nederlandse overheid waarmee mensen vanaf 66 jaar en 7 maanden oud een basisinkomen krijgen als ze gestopt zijn met werken. Het is bedoeld als ondersteuning om van te leven wanneer iemand niet meer werkt. <br> De hoogte van het bedrag dat je ontvangt, hangt af van hoe lang je hebt gewerkt en hoeveel AOW-premie je hebt betaald. Als je lang genoeg hebt gewerkt en AOW-premie hebt betaald, krijg je de volledige AOW-uitkering. Als je minder lang hebt gewerkt, krijg je minder. <br> Het is belangrijk om te weten dat je niet automatisch AOW krijgt als je de leeftijd van 66 jaar en 7 maanden bereikt. Je moet zelf een aanvraag indienen bij de Sociale Verzekeringsbank (SVB). <br> Als je naast je AOW-uitkering nog andere inkomsten hebt, kan dat invloed hebben op de hoogte van je AOW. Het kan zijn dat je minder AOW ontvangt als je bijvoorbeeld een pensioen hebt opgebouwd.</p>",
+            "source" => "https://nl.wikipedia.org/wiki/Algemene_Ouderdomswet",
         ],
         [
             "id" => "5",
-            "title" => "title 5",
-            "description" => "Description 5",
-            "source" => "Source 5",
-        ],
-        [
-            "id" => "6",
-            "title" => "title 6",
-            "description" => "Description 6",
-            "source" => "Source 6",
+            "title" => "Rechtwijzer Senioren",
+            "description" => "<p>Op onderstaande website kunt u veel informatie vinden, ik raad u aan om op onderstaande link te klikken en alle onderwerpen op uw gemak door te lezen. <br> Deze voldende onderwerpen worden besproken: <br> <ul><li>Algemene Ouderdomswet (AOW)</li><li>Loon & Pensioen</li><li>Belasting en toeslagen</li><li>Bijzondere bijstand</li><li>Financieel advies senioren</li></ul></p>",
+            "source" => "https://www.fnv.nl/cao-sector/senioren/hulp-en-advies/rechtenwijzer-senioren",
         ]
     ];
 }
