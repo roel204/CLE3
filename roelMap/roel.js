@@ -1,6 +1,6 @@
 window.addEventListener('load', init);
 
-let apiUrl = "http://localhost/CLE3/roelMap/rechtInZorg.php"
+let apiUrl = "rechtInZorg.php"
 let jsonData = [];
 let favoriteItems = [];
 
@@ -96,7 +96,7 @@ function favoriteClickHandler(e) {
 function hennieTalk(text) {
     const box = document.getElementById("box");
     const message = text;
-    const delay = 69;
+    const delay = 50;
 
     let i = 0;
     let interval = setInterval(() => {
