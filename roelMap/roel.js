@@ -4,10 +4,15 @@ let apiUrl = "rechtInZorg.php"
 let jsonData = [];
 let favoriteItems = [];
 
-
 function init()
 {
-    fetch(apiUrl)
+    apiFetch(apiUrl)
+    favoriteItems = JSON.parse(localStorage.getItem('favorite')) || [];
+    hennieTalk("Op deze pagina kunt u meer leren over uw rechten. Klik op een van de titels voor meer info.")
+}
+
+function apiFetch(api) {
+    fetch(api)
         .then(response => {
             if (!response.ok) {
                 throw new Error(response.statusText)
@@ -16,11 +21,6 @@ function init()
         })
         .then(createList)
         .catch(ajaxErrorHandler)
-
-    favoriteItems = JSON.parse(localStorage.getItem('favorite')) || [];
-
-    hennieTalk("Op deze pagina kunt u meer leren over uw rechten. Klik op een van de titels voor meer info.")
-
 }
 
 function createList(e) {
