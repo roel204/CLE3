@@ -13,8 +13,7 @@ body {
 .pinboard {
     border: 15px #D8C7AD solid;
     background-color: #9F6A45;
-    margin: 1vw;
-    margin-right: 10vw;
+    margin: 1vw 10vw 1vw 1vw;
     display: flex;
     flex-wrap: wrap;
     float: left;
@@ -24,12 +23,11 @@ body {
 }
 
 .pinboardItem {
-    margin: 2vw;
-    margin-left: 15vw;
+    margin: 2vw 2vw 2vw 15vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 16vw;
+    width: 15.8vw;
     cursor: pointer;
 }
 
@@ -50,6 +48,8 @@ body {
     border: 2px solid black;
     border-radius: 15px;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
 }
 
 #talk-box::before {

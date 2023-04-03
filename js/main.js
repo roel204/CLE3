@@ -1,6 +1,5 @@
 window.addEventListener('load', init);
 
-
 let pinboard;
 let imageUrls = [];
 let dataUrls = [];
@@ -21,8 +20,7 @@ function init()
 
     document.addEventListener("click", imageClickHandler)
 
-    hennieTalk("Hallo, Ik ben Hennie! Uw virtuele gids door deze website. Klik op één van de icoontjes op het prikbord.")
-
+    hennieTalk("Hallo, Ik ben Hennie! Uw virtuele gids door deze website. Klik op één van de icoontjes.")
 }
 
 function imageClickHandler(e) {
@@ -31,25 +29,22 @@ function imageClickHandler(e) {
             window.location.href = e.target.getAttribute("data-url");
         }
     }
-
-
 }
 
 function hennieTalk(text) {
     const box = document.getElementById("box");
     const message = text;
-    const delay = 60;
+    const delay = 50;
 
-    let i = 0;
-    let interval = setInterval(() => {
-        if (message[i] === ' ') {
-            box.innerHTML += '&nbsp;';
-        } else {
-            box.innerText += message[i];
-        }
-        i++;
-        if (i >= message.length) clearInterval(interval);
-    }, delay);
+    for (let i = 0; i < message.length; i++) {
+        setTimeout(() => {
+            if (message[i] === ' ') {
+                box.innerHTML += '&nbsp;';
+            } else {
+                box.innerText += message[i];
+            }
+        }, i * delay);
+    }
 }
 
 

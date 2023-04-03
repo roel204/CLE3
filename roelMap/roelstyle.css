@@ -1,3 +1,7 @@
+body {
+    font-size: 1.2rem;
+}
+
 .list {
     height: 100%;
     width: 100%;
@@ -15,6 +19,7 @@
     border-radius: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
 }
 
@@ -25,7 +30,7 @@
     align-items: flex-start;
     border: none;
     border-radius: 16px;
-    height: 80%;
+    height: 85%;
     width: 80%;
     box-shadow: 0 16px 22px 0 rgba(0, 0, 0, 0.6);
     z-index: 9999;
@@ -90,4 +95,8 @@ a {
     top: 5px;
     right: 5px;
     font-size: 24px;
+}
+
+#talk-box h3 {
+    font-size: 1.17rem;
 }
