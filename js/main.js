@@ -21,7 +21,7 @@ function init()
 
     document.addEventListener("click", imageClickHandler)
 
-    hennieTalk("Hallo, Ik ben Hennie! Uw virtuele gids door deze website. Klik op één van de icoontjes op het prikbord")
+    hennieTalk("Hallo, Ik ben Hennie! Uw virtuele gids door deze website. Klik op één van de icoontjes op het prikbord.")
 
 }
 
