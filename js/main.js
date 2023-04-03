@@ -8,7 +8,7 @@ let dataUrls = [];
 function init()
 {
     pinboard = document.getElementById("pinboard")
-    imageUrls = ["img/placeholder.png", "img/Zorg_in_de_buurt.png", "img/Veiligheid_in_zorg.png", "img/vragen_over_zorg.png"]
+    imageUrls = ["img/Recht_in_zorg.png", "img/Zorg_in_de_buurt.png", "img/Veiligheid_in_zorg.png", "img/vragen_over_zorg.png"]
     dataUrls = ["roelMap/roelHTML.html", "stijnMap/stijnHTML.html", "matsMap/matsHTML.html", "lindseyMap/lindseyHTML.html"]
 
     for (let imageUrl of imageUrls) {

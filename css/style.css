@@ -24,7 +24,7 @@ body {
 }
 
 .pinboardItem {
-    margin: 2vw;
+    margin: 5vw;
     margin-left: 10vw;
     display: flex;
     flex-direction: row;
