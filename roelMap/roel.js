@@ -56,7 +56,6 @@ function createList(e) {
     }
 }
 
-
 function clickHandler(e) {
     if (e.target.classList.contains("clickable")) {
         let dialog = document.getElementById("dialog")
@@ -98,16 +97,15 @@ function hennieTalk(text) {
     const message = text;
     const delay = 50;
 
-    let i = 0;
-    let interval = setInterval(() => {
-        if (message[i] === ' ') {
-            box.innerHTML += '&nbsp;';
-        } else {
-            box.innerText += message[i];
-        }
-        i++;
-        if (i >= message.length) clearInterval(interval);
-    }, delay);
+    for (let i = 0; i < message.length; i++) {
+        setTimeout(() => {
+            if (message[i] === ' ') {
+                box.innerHTML += '&nbsp;';
+            } else {
+                box.innerText += message[i];
+            }
+        }, i * delay);
+    }
 }
 
 function ajaxErrorHandler(e) {
