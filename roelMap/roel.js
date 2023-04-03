@@ -96,7 +96,7 @@ function favoriteClickHandler(e) {
 function hennieTalk(text) {
     const box = document.getElementById("box");
     const message = text;
-    const delay = 69;
+    const delay = 50;
 
     let i = 0;
     let interval = setInterval(() => {

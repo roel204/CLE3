@@ -38,7 +38,7 @@ function imageClickHandler(e) {
 function hennieTalk(text) {
     const box = document.getElementById("box");
     const message = text;
-    const delay = 69;
+    const delay = 60;
 
     let i = 0;
     let interval = setInterval(() => {
