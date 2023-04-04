@@ -4,7 +4,7 @@ window.addEventListener('load', init);
 
 function init()
 {
-    hennieTalk("Hier kunt u verschillende veelgestelde vragen zien, klik op één van de vragen voor een antwoord.")
+    hennieTalk("Hier kunt u verschillende veelgestelde vragen zien, klik op één van de vragen voor gegeven antwoorden.")
 }
 
 function hennieTalk(text) {
