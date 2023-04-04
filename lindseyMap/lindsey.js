@@ -1,6 +1,6 @@
 window.addEventListener('load', init);
 
-
+apiUrl = "http://localhost/Jaar1/CLE3/lindseyMap/algemeneVragen.php"
 
 function init()
 {
