@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Monsterrat';
-    src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+    src: url("../../fonts/Montserrat-VariableFont_wght.ttf");
 }
 
 body {
-    font-family: 'Monsterrat', serif;
-    background-image: url("../img/background.png");
+    background-image: url("../../img/background.png");
     background-size: cover;
+    font-family: 'Monsterrat', serif;
     margin: 0;
     position: fixed;
 }
@@ -24,11 +24,11 @@ body {
 }
 
 .pinboardItem {
-    margin: 2vw 2vw 2vw 15vw;
+    margin: 2vw 2vw 2vw ;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 15.8vw;
+    width: 22vw;
     cursor: pointer;
 }
 
@@ -69,6 +69,7 @@ body {
 
 #talk-box h3 {
     margin-left: 1vw;
+    font-size: 1.1vw;
 }
 
 .terug-knop {
