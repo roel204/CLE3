@@ -1,90 +1,71 @@
 window.addEventListener('load', init);
 
-apiUrl = "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php"
-let locationList = document.getElementById("locaties")
+apiUrl = "zorgDichtbij.php"
 
-let hospitalName = document.getElementById("locationZiek")
-let hospitalUrl = document.getElementById("locationZiekLink")
-let hospitalMaps = document.getElementById("locationZiekMaps")
+let locationGallery = document.getElementById("locatieGallery")
+let favoriteList = document.getElementById("favorietenLijst")
 
-let ApothecaryName = document.getElementById("locationApo")
-let ApothecaryUrl = document.getElementById("locationApoLink")
-let ApothecaryMaps = document.getElementById("locationApoMaps")
+let locationList = [];
+let favoriteLocations = [];
 
-let DoctorName = document.getElementById("locationHuis")
-let DoctorUrl = document.getElementById("locationHuisLink")
-let DoctorMaps = document.getElementById("locationZiekMaps")
+let modalcontent = document.getElementById("modal-content")
 
-let favorite = document.getElementById("favoriteToggle")
-let favorites = document.getElementById("favorietenLijst")
-let clearfavourites = document.getElementById("clearFavorites")
-let locations = []
-let locationDetail = []
-let favoriteList = []
-const box = document.getElementById("box");
+let detailDialog;
+let detailContent;
 
 function init(){
-    if (typeof window.localStorage === "undefined") {
-    console.error('Local storage is not available in your browser');
-    return;
+
+    detailDialog = document.getElementById('location-detail');
+    detailContent = detailDialog.querySelector('.modal-content');
+    detailDialog.addEventListener('click', detailModalClickHandler);
+    detailDialog.addEventListener('close', dialogCloseHandler);
+
+    locationGallery.addEventListener("click", locationClickHandler)
+    ajaxRequest(apiUrl, ajaxLocationSuccessHandler)
+
+    hennieTalk("welkom bij zorg in de buurt. Klik op jouw de voor jouw gemeente om de dichtsbijzijnde zorglocaties te zien")
 }
-    getLocation()
 
-    favorite.addEventListener("click", favoriteChoice)
-    locationList.addEventListener("change", locationChoice)
-    clearfavourites.addEventListener("click", clearFavourites)
-
-    hennieTalk("Welkom bij zorg in de buurt. Kies de voor jouw dichtsbijzijnde woonplek.")
-}
-
-function getLocation() {
-    fetch(apiUrl)
+function ajaxRequest(url, successHandler)
+{
+    fetch(url)
         .then((response) => {
             if (!response.ok) {
                 throw new Error(response.statusText);
             }
             return response.json();
         })
-        .then(ajaxLocationSuccessHandler)
+        .then(successHandler)
         .catch(ajaxErrorHandler);
 }
 
-function ajaxLocationSuccessHandler(data) {
+function ajaxLocationSuccessHandler(data){
+
+    console.log(data)
+
     for (let location of data){
-        let locationItem = document.createElement("option")
-        locationItem.innerText = location.name
-        locationItem.value = location.id
-        locationList.appendChild(locationItem)
-        locations.push(location)
 
-        favoriteList[location.id] = "no";
-        if (localStorage.getItem(location.id) !== null){
-            favoriteList[location.id] = localStorage.getItem(location.id)
-        }
-        localStorage.setItem(location.id, favoriteList[location.id])
-        if (favoriteList[location.id] === "yes"){
-            let favouriteLocation = document.createElement("li")
-            favouriteLocation.innerHTML = locations[location.id].name
-            favouriteLocation.dataset.listId = location.id
-            favorites.appendChild(favouriteLocation)
-        }
 
-        if (location.zorgLocationUrl !== "#"){
-            fetch(location.zorgLocationUrl)
-                .then((response) => {
-                    if (!response.ok) {
-                        throw new Error(response.statusText);
-                    }
-                    return response.json();
-                })
-                .then(ajaxLocationDetailSuccessHandler)
-                .catch(ajaxErrorHandler);
-        }
+        let locatieKaartje = document.createElement("div")
+        locatieKaartje.classList.add("locatieKaartje")
+        locatieKaartje.dataset.id = location.id
+
+        locationGallery.appendChild(locatieKaartje)
+
+        ajaxRequest(location.zorgLocationUrl, ajaxLocationDetailSuccessHandler)
+
     }
 }
 
 function ajaxLocationDetailSuccessHandler(data){
-    locationDetail[data.id] = data
+    console.log(data)
+    let locationKaart = document.querySelector(`.locatieKaartje[data-id='${data.id}']`);
+
+    locationList[data.id] = data
+
+    let locationName = document.createElement("h2")
+    locationName.innerHTML = data.naam
+    locationKaart.appendChild(locationName)
 }
 
 function ajaxErrorHandler(data) {
@@ -92,79 +73,103 @@ function ajaxErrorHandler(data) {
     console.error(data)
 }
 
-function locationChoice(e){
+function locationClickHandler(e)
+{
+    let clickedItem = e.target;
 
-    hospitalName.innerHTML = locationDetail[locationList.value].ziekenhuis
-    hospitalUrl.setAttribute("href", locationDetail[locationList.value].ziekenhuisUrl)
-    hospitalMaps.setAttribute("href", locationDetail[locationList.value].ziekenhuisMaps)
-
-
-    ApothecaryName.innerHTML = locationDetail[locationList.value].apotheek
-    ApothecaryUrl.setAttribute("href", locationDetail[locationList.value].apotheekUrl)
-    ApothecaryMaps.setAttribute("href", locationDetail[locationList.value].apotheekMaps)
-
-    DoctorName.innerHTML = locationDetail[locationList.value].huisarts
-    DoctorUrl.setAttribute("href", locationDetail[locationList.value].DoctorUrl)
-    DoctorMaps.setAttribute("href", locationDetail[locationList.value].DoctorMaps)
-
-    if (localStorage.getItem(locationList.value) === "yes"){
-        favorite.src = "stijnImg/Favorite.png"
-    } else{
-        favorite.src = "stijnImg/Unfavorite.png"
+    if (clickedItem.nodeName !== 'DIV') {
+        return;
     }
-    console.log(`de nieuwe locatie is ${locations[locationList.value].name}`)
-    console.log(favoriteList)
-    box.innerHTML = ""
-    if (locations[locationList.value].name === "geen locatie"){
-        hennieTalk("Welkom bij zorg in de buurt. Kies de voor jouw dichtsbijzijnde woonplek.")
-    } else{
-        hennieTalk(`Hier zie je de best gereviewde ziekenhuis, apotheek en huisarts van ${locations[locationList.value].name}. klik op de "bezoek website" \n om hun website te bezoeken. Klik op "Zoek op Googlemaps" om een route te vinden ernaar toe.`)
 
-    }
+    let location = locationList[clickedItem.dataset.id];
+
+    detailContent.innerHTML = '';
+
+    let title = document.createElement('h1');
+    title.innerHTML = location.naam
+    detailContent.appendChild(title);
+
+
+    let ziekTitle = document.createElement("p")
+    ziekTitle.innerHTML = location.ziekenhuis
+    detailContent.appendChild(ziekTitle);
+
+    let ziekLink = document.createElement("a")
+    ziekLink.setAttribute("href", location.ziekenhuisUrl)
+    ziekLink.setAttribute("target","_blank")
+    ziekLink.innerHTML = "link naar website"
+    detailContent.appendChild(ziekLink);
+
+
+    let apoTitle = document.createElement("p")
+    apoTitle.innerHTML = location.apotheek
+    detailContent.appendChild(apoTitle);
+
+    let apoLink = document.createElement("a")
+    apoLink.setAttribute("href", location.apotheekUrl)
+    apoLink.setAttribute("target","_blank")
+    apoLink.innerHTML = "link naar website"
+    detailContent.appendChild(apoLink);
+
+
+    let huisTitle = document.createElement("p")
+    huisTitle.innerHTML = location.huisarts
+    detailContent.appendChild(huisTitle);
+
+    let huisLink = document.createElement("a")
+    huisLink.setAttribute("href", location.huisartsUrl)
+    huisLink.setAttribute("target","_blank")
+    huisLink.innerHTML = "link naar website"
+    detailContent.appendChild(huisLink);
+
+
+    detailDialog.showModal();
+    locationGallery.classList.add('dialog-open');
+    console.log(detailContent)
+
 }
 
-function favoriteChoice(e){
+function detailModalClickHandler(e)
+{
+    if (e.target.nodeName === 'DIALOG' || e.target.nodeName === 'BUTTON') {
+        console.log(detailContent)
+        detailDialog.close();
+        modalcontent.innerHTML = ""
+    }
 
-    if (favoriteList[locationList.value] === "yes"){
-        favorite.src = "stijnImg/Unfavorite.png"
-        favoriteList[locationList.value] = "no"
-        localStorage.setItem(locationList.value, "no")
-        let favouriteLocations = document.querySelectorAll("listId")
-        for(let favouriteLocation of favouriteLocations){
-            if (favouriteLocation.getAttribute("listId") === locationList.value){
-                favouriteLocation.remove()
-            }
+
+}
+
+function dialogCloseHandler(e)
+{
+    console.log(detailContent)
+    locationGallery.classList.remove('dialog-open');
+
+
+}
+
+function updateFavorites(locationId){
+    if (locationId === "yes" || locationId === "no"){
+        if (favoriteLocations[locationId] === "yes"){
+            favoriteLocations[locationId] = "no"
+        } else {
+            favoriteLocations[locationId] = "yes"
         }
-
-    } else{
-        favorite.src = "stijnImg/Favorite.png"
-        favoriteList[locationList.value] = "yes"
-        localStorage.setItem(locationList.value, "yes")
-        let favouriteLocation = document.createElement("li")
-        favouriteLocation.innerHTML = locations[locationList.value].name
-        favouriteLocation.dataset.listId = location.id
-        favorites.appendChild(favouriteLocation)
     }
-    console.log(favoriteList)
-}
-
-function clearFavourites(){
-    for(let location of locationList){
-        favoriteList[location.value] = "no"
-        localStorage.setItem(location.value, "no")
+    favoriteList.innerHTML = ""
+    for (let location of favoriteLocations){
+        if (location === "yes"){
+            let favoriteListItem = document.createElement("li")
+            favoriteListItem.innerHTML = locationList[locationId].naam
+            favoriteList.appendChild(favoriteListItem)
+        }
     }
-    if (localStorage.getItem(locationList.value) === "yes"){
-        favorite.src = "stijnImg/Favorite.png"
-    } else{
-        favorite.src = "stijnImg/Unfavorite.png"
-    }
-    favorites.innerHTML = ""
 }
 
 function hennieTalk(text) {
 
     const message = text;
-    const delay = 10;
+    const delay = 16;
 
     let i = 0;
     let interval = setInterval(() => {

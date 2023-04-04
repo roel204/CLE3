@@ -6,169 +6,164 @@ function getLocations()
 {
     return [
         [
-            "id" => 0,
-            "name" => "geen locatie",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=0"
-        ],
-        [
             "id" => 1,
             "name" => "Amsterdam",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=1"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=1"
         ],
         [
             "id" => 2,
             "name" => "Rotterdam",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=2"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=2"
         ],
         [
             "id" => 3,
             "name" => "Den Haag",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=3"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=3"
         ],
         [
             "id" => 4,
             "name" => "Utrecht",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=4"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=4"
         ],
         [
             "id" => 5,
             "name" => "Eindhoven",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=5"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=5"
         ],
         [
             "id" => 6,
             "name" => "Groningen",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=6"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=6"
         ],
         [
             "id" => 7,
             "name" => "Tilburg",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=7"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=7"
         ],
         [
             "id" => 8,
             "name" => "Almere",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=8"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=8"
         ],
         [
             "id" => 9,
             "name" => "Breda",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=9"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=9"
         ],
         [
             "id" => 10,
             "name" => "Nijmegen",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=10"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=10"
         ],
         [
             "id" => 11,
             "name" => "Apeldoorn",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=11"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=11"
         ],
         [
             "id" => 12,
             "name" => "Arnhem",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=12"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=12"
         ],
         [
             "id" => 13,
             "name" => "Haarlem",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=13"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=13"
         ],
         [
             "id" => 14,
             "name" => "Haarlemmermeer",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=14"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=14"
         ],
         [
             "id" => 15,
             "name" => "Enschede",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=15"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=15"
         ],
         [
             "id" => 16,
             "name" => "Amersfoort",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=16"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=16"
         ],
         [
             "id" => 17,
             "name" => "Zaanstad",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=17"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=17"
         ],
         [
             "id" => 18,
             "name" => "'s-Hertogenbosch",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=18"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=18"
         ],
         [
             "id" => 19,
             "name" => "Zwolle",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=19"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=19"
         ],
         [
             "id" => 20,
             "name" => "Leeuwarden",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=20"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=20"
         ],
         [
             "id" => 21,
             "name" => "Zoetermeer",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=21"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=21"
         ],
         [
             "id" => 22,
             "name" => "Leiden",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=22"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=22"
         ],
         [
             "id" => 23,
             "name" => "Maastricht",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=23"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=23"
         ],
         [
             "id" => 24,
             "name" => "Ede",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=24"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=24"
         ],
         [
             "id" => 25,
             "name" => "Dordrecht",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=25"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=25"
         ],
         [
             "id" => 26,
             "name" => "Westland",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=26"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=26"
         ],
         [
             "id" => 27,
             "name" => "Alphen aan den Rijn",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=27"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=27"
         ],
         [
             "id" => 28,
             "name" => "Alkmaar",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=28"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=28"
         ],
         [
             "id" => 29,
             "name" => "Emmen",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=29"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=29"
         ],
         [
             "id" => 30,
             "name" => "Delft",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=30"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=30"
         ],
         [
             "id" => 31,
             "name" => "Venlo",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=31"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=31"
         ],
         [
             "id" => 32,
             "name" => "Deventer",
-            "zorgLocationUrl" => "http://localhost/Jaar1/CLE3/stijnMap/zorgDichtbij.php?id=32"
+            "zorgLocationUrl" => "zorgDichtbij.php?id=32"
         ]
     ];
 }
@@ -180,401 +175,325 @@ function getLocations()
 function getLocationDetails($id)
 {
     $tags = [
-        0 => [
-            "id" => 0,
-            "apotheek" => "",
-            "apotheekUrl" => "",
-            "apotheekMaps" => "",
-            "ziekenhuis" => "",
-            "ziekenhuisUrl" => "",
-            "ziekenhuisMaps" => "",
-            "huisarts" => "",
-            "huisartsUrl" => "",
-            "huisartsMaps" => ""
-        ],
         1 => [
             "id" => 1,
+            "naam" => "Amsterdam",
             "apotheek" => "placeholder apo 1",
             "apotheekUrl" => "placeholder apo url 1",
-            "apotheekMaps" => "placeholder apo maps 1",
             "ziekenhuis" => "Ziekenhuis: Antoni van Leeuwenhoek, locatie Plesmanlaan",
             "ziekenhuisUrl" => "https://www.avl.nl/",
-            "ziekenhuisMaps" => "https://www.google.nl/maps/place/Antoni+van+Leeuwenhoek/@52.3494675,4.8170929,15z/data=!4m15!1m8!3m7!1s0x47c5e22632d776e5:0x5a6919659835bcd2!2sPlesmanlaan+121,+1066+CX+Amsterdam!3b1!8m2!3d52.3494678!4d4.8258262!16s%2Fg%2F11c20t_jsg!3m5!1s0x47c5e22632d776e5:0x3b08d34dc09916ef!8m2!3d52.3494626!4d4.8258268!16s%2Fg%2F120xv4xs",
             "huisarts" => "placeholder huis 1",
-            "huisartsUrl" => "placeholder huis url 1",
-            "huisartsMaps" => "placeholder huis maps 1"
+            "huisartsUrl" => "placeholder huis url 1"
         ],
         2 => [
             "id" => 2,
+            "naam" => "Rotterdam",
             "apotheek" => "placeholder apo 2",
             "apotheekUrl" => "placeholder apo url 2",
-            "apotheekMaps" => "placeholder apo maps 2",
-            "ziekenhuis" => "placeholder ziek 2",
-            "ziekenhuisUrl" => "placeholder ziek url 2",
-            "ziekenhuisMaps" => "placeholder ziek maps 2",
+            "ziekenhuis" => "Maasstad Ziekenhuis, hoofdlocatie",
+            "ziekenhuisUrl" => "https://www.maasstadziekenhuis.nl/",
             "huisarts" => "placeholder huis 2",
-            "huisartsUrl" => "placeholder huis url 2",
-            "huisartsMaps" => "placeholder huis maps 2"
+            "huisartsUrl" => "placeholder huis url 2"
         ],
         3 => [
             "id" => 3,
+            "naam" => "Den Haag",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
-            "ziekenhuis" => "placeholder ziek",
-            "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
+            "ziekenhuis" => "HMC Bronovo",
+            "ziekenhuisUrl" => "https://www.haaglandenmc.nl/",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         4 => [
             "id" => 4,
+            "naam" => "Utrecht",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
-            "ziekenhuis" => "placeholder ziek",
-            "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
+            "ziekenhuis" => "UMC Utrecht, locatie Heidelberglaan",
+            "ziekenhuisUrl" => "https://www.umcutrecht.nl/nl",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         5 => [
             "id" => 5,
+            "naam" => "Eindhoven",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
-            "ziekenhuis" => "placeholder ziek",
-            "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
+            "ziekenhuis" => "Máxima MC, locatie Eindhoven",
+            "ziekenhuisUrl" => "https://www.mmc.nl/",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         6 => [
             "id" => 6,
+            "naam" => "Groningen",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         7 => [
             "id" => 7,
+            "naam" => "Tilburg",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         8 => [
             "id" => 8,
+            "naam" => "Almere",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         9 => [
             "id" => 9,
+            "naam" => "Breda",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         10 => [
             "id" => 10,
+            "naam" => "Nijmegen",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         11 => [
             "id" => 11,
+            "naam" => "Apeldoorn",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         12 => [
             "id" => 12,
+            "naam" => "Arnhem",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         13 => [
             "id" => 13,
+            "naam" => "Haarlem",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         14 => [
             "id" => 14,
+            "naam" => "Haarlemmermeer",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         15 => [
             "id" => 15,
+            "naam" => "Enschede",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         16 => [
             "id" => 16,
+            "naam" => "Amersfoort",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         17 => [
             "id" => 17,
+            "naam" => "Zaanstad",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         18 => [
             "id" => 18,
+            "naam" => "s-Hertogenbosch",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         19 => [
             "id" => 19,
+            "naam" => "Zwolle",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         20 => [
             "id" => 20,
+            "naam" => "Leeuwarden",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         21 => [
             "id" => 21,
+            "naam" => "Zoetermeer",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         22 => [
             "id" => 22,
+            "naam" => "Leiden",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         23 => [
             "id" => 23,
+            "naam" => "Maastricht",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         24 => [
             "id" => 24,
+            "naam" => "Ede",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         25 => [
             "id" => 25,
+            "naam" => "Dordrecht",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         26 => [
             "id" => 26,
+            "naam" => "Westland",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         27 => [
             "id" => 27,
+            "naam" => "Alphen aan den Rijn",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         28 => [
             "id" => 28,
+            "naam" => "Alkmaar",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         29 => [
             "id" => 29,
+            "naam" => "Emmen",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         30 => [
             "id" => 30,
+            "naam" => "Delft",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         31 => [
             "id" => 31,
+            "naam" => "Venlo",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ],
         32 => [
             "id" => 32,
+            "naam" => "Deventer",
             "apotheek" => "placeholder apo",
             "apotheekUrl" => "placeholder apo url",
-            "apotheekMaps" => "placeholder apo maps",
             "ziekenhuis" => "placeholder ziek",
             "ziekenhuisUrl" => "placeholder ziek url",
-            "ziekenhuisMaps" => "placeholder ziek maps",
             "huisarts" => "placeholder huis",
-            "huisartsUrl" => "placeholder huis url",
-            "huisartsMaps" => "placeholder huis maps"
+            "huisartsUrl" => "placeholder huis url"
         ]
     ];
 

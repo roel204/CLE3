@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Senioren in de Zorg</title>
   <link rel="stylesheet" href="../css/style.css"/>
-  <link rel="icon" href="../img/RH.png">
+  <link rel="stylesheet" href="stijnstyle.css"/>
+  <link rel="icon" href="../img/hennie.png">
   <script type="text/javascript" src="stijn.js" defer></script>
 </head>
 <body>
@@ -14,32 +15,14 @@
 </header>
 <main>
   <section class="pinboard">
-    <section class="bedieningspaneel">
-      <select name="locaties" id="locaties"></select>
-    </section>
-    <section class="locatieInfo">
+    <section>
+      <h1>LOCATIES</h1>
+      <section class="locatieGallery" id="locatieGallery">
 
-      <h2 id="locationZiek"></h2>
-      <a href="" id="locationZiekLink" target="_blank">Bezoek website</a>
-      <a href="" id="locationZiekMaps" target="_blank">Zoek op GoogleMaps</a>
-      <br>
-
-      <h2 id="locationApo"></h2>
-      <a href="" id="locationApoLink" target="_blank">Bezoek website</a>
-      <a href="" id="locationApoMaps" target="_blank">Zoek op GoogleMaps</a>
-      <br>
-
-      <h2 id="locationHuis"></h2>
-      <a href="" id="locationHuisLink" target="_blank">Bezoek website</a>
-      <a href="" id="locationHuisMaps" target="_blank">Zoek op GoogleMaps</a>
-      <br>
-      <br>
-
-      <img id="favoriteToggle" src="stijnImg/unFavorite.png" height="30" width="30">
-
+      </section>
     </section>
     <section class="favorietenLijst">
-      <h1>Favorieten<img src="stijnImg/Favorite.png" height="15" width=15></h1>
+      <h1>Favorieten  <img src="stijnImg/Favorite.png" height="15" width=15></h1>
       <ul id="favorietenLijst"></ul>
       <button id="clearFavorites">wis favorieten</button>
     </section>
@@ -53,6 +36,12 @@
   <section id="talk-box">
     <h3 id="box"></h3>
   </section>
+
+  <dialog class="modal" id="location-detail">
+    <div class="modal-content" id="modal-content"></div>
+    <button class="modal-close">❌</button>
+  </dialog>
+
 </main>
 
 <footer>
