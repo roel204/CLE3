@@ -28,6 +28,7 @@ function ajaxSuccessHandler(data){
     for(let question of questions){
         let block = document.createElement("div");
         let text = document.createElement("h2");
+        block.classList.add("qBlock")
         text.innerText = question.question;
         qList.appendChild(block)
         block.appendChild(text)
@@ -37,8 +38,12 @@ function ajaxSuccessHandler(data){
 
 }
 
-function clickHandler(){
+function clickHandler(e){
+    let selected = e.target;
+    if(selected.className === "qBlock"){
+        let quest = questions[selected.dataset.id];
 
+    }
 }
 
 function hennieTalk(text) {
@@ -56,4 +61,8 @@ function hennieTalk(text) {
         i++;
         if (i >= message.length) clearInterval(interval);
     }, delay);
+}
+
+function ajaxErrorHandler(e) {
+    console.error(e)
 }
