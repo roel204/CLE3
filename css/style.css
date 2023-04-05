@@ -13,7 +13,7 @@ body {
 
 .pinboard {
     border: 15px #D8C7AD solid;
-    background-color: #9F6A45;
+    background-image: url("../img/prikbordback.png");
     margin: 1vw 10vw 1vw 1vw;
     display: flex;
     flex-wrap: wrap;
