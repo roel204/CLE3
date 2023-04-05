@@ -67,16 +67,4 @@ function detailWindow(e) {
     let title = document.createElement('h1');
     title.innerHTML = `${pokemon.name} (#${pokemon.id})`;
     detailContent.appendChild(title);
-
-    let image = document.createElement('img');
-    image.src = pokemon.sprites.other['official-artwork'].front_shiny;
-    image.classList.add('pokemon-card');
-    detailContent.appendChild(image);
-
-    let types = document.createElement('h3');
-    if (pokemon.types.length === 2) {
-        types.innerHTML = pokemon.types['0'].type.name + ' / ' + pokemon.types['1'].type.name;}
-    if (pokemon.types.length === 1) {
-        types.innerHTML = pokemon.types['0'].type.name}
-    detailContent.appendChild(types);
 }
