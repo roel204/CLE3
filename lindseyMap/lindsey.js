@@ -1,13 +1,12 @@
 window.addEventListener('load', init);
 
-let apiUrl = "http://localhost/Jaar1/CLE3/lindseyMap/algemeneVragen.php"
+let apiUrl = "algemeneVragen.php"
 let questions = [];
 
 function init()
 {
     hennieTalk("Hier kunt u verschillende veelgestelde vragen zien, klik op één van de vragen voor gegeven antwoorden.")
     Fetch(apiUrl)
-    hennieTalk("Op deze pagina kunt u meer leren over uw rechten. Klik op een van de titels voor meer info.")
 }
 
 function Fetch(api) {
