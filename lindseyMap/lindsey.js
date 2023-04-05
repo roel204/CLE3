@@ -1,16 +1,16 @@
 window.addEventListener('load', init);
 
-apiUrl = "http://localhost/Jaar1/CLE3/lindseyMap/algemeneVragen.php"
+let apiUrl = "http://localhost/Jaar1/CLE3/lindseyMap/algemeneVragen.php"
+let questions = [];
 
 function init()
 {
     hennieTalk("Hier kunt u verschillende veelgestelde vragen zien, klik op één van de vragen voor gegeven antwoorden.")
-    apiFetch(apiUrl)
-    favoriteItems = JSON.parse(localStorage.getItem('favorite')) || [];
+    Fetch(apiUrl)
     hennieTalk("Op deze pagina kunt u meer leren over uw rechten. Klik op een van de titels voor meer info.")
 }
 
-function apiFetch(api) {
+function Fetch(api) {
     fetch(api)
         .then(response => {
             if (!response.ok) {
@@ -18,8 +18,27 @@ function apiFetch(api) {
             }
             return response.json()
         })
-        .then(createList)
+        .then(ajaxSuccessHandler)
         .catch(ajaxErrorHandler)
+}
+
+function ajaxSuccessHandler(data){
+    questions = data;
+    const qList = document.getElementById("pinboardL");
+    for(let question of questions){
+        let block = document.createElement("div");
+        let text = document.createElement("h2");
+        text.innerText = question.question;
+        qList.appendChild(block)
+        block.appendChild(text)
+
+        block.addEventListener("click", clickHandler)
+    }
+
+}
+
+function clickHandler(){
+
 }
 
 function hennieTalk(text) {
