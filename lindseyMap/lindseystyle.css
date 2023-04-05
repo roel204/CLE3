@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Monsterrat';
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+body {
+    font-family: 'Monsterrat', serif;
+    background-image: url("../img/background.png");
+    background-size: cover;
+    margin: 0;
+    position: fixed;
+}
+
+.pinboard {
+    border: 15px #D8C7AD solid;
+    background-color: #9F6A45;
+    margin: 1vw 10vw 1vw 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    position: relative;
+    width: 90vw;
+    height: 80vh;
+}
+
+.pinboardItem {
+    margin: 2vw 2vw 2vw 15vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 15.8vw;
+    cursor: pointer;
+}
+
+.hennie {
+    width: 35vw;
+    position: absolute;
+    bottom: -10vw;
+    right: 0;
+}
+
+#talk-box {
+    position: absolute;
+    bottom: -10vh;
+    left: 1vw;
+    width: 75vw;
+    height: 10vh;
+    background-color: #cccccc;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+#talk-box::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -30px;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 15px 30px;
+    border-color: transparent transparent transparent black;
+}
+
+#talk-box h3 {
+    margin-left: 1vw;
+}
+
+.terug-knop {
+    width: 7vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
