@@ -1,11 +1,11 @@
 window.addEventListener('load', init);
 
+
+let apiUrl = "http://localhost/CLE3/matsMap/veiligheidInZorg.php"
+let jsonData = [];
 let pinboard = document.getElementById("pinboard")
 let detailDialog;
 let detailContent;
-
-
-
 
 function init()
 {
@@ -18,25 +18,59 @@ function init()
         const image = document.createElement("img");
         image.src = imageUrl;
         image.classList.add('pinboardItem')
+        image.addEventListener("click", detailWindow);
         image.setAttribute("data-url", dataUrls[imageUrls.indexOf(imageUrl)]);
         pinboard.appendChild(image);
     }
 
-    document.addEventListener("click", imageClickHandler)
+    detailDialog = document.getElementById('detail');
+    detailContent = document.querySelector('.modal-content');
+
+    betterCallAjax(apiUrl, getApiItems);
 }
 
-function imageClickHandler(e) {
-    if (e.target.className !== 'hennie') {
-        if (e.target.nodeName === "IMG") {
-            detailWindow();
+function betterCallAjax(link, succesHandler)
+{
+    fetch(link)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(response.statusText);
+            }
+            return response.json();
+        })
+        .then(succesHandler)
+        .catch(ajaxErrorHandler);
+}
+
+function getApiItems(data)
+{
+    for (let items of data.results) {
+        let pokemonCard = document.createElement('div');
+        pokemonCard.classList.add('ApiItem');
+        pokemonCard.dataset.name = items.name
         }
+
+        betterCallAjax(items.url, fillApiItems);
     }
+
+function fillApiItems() {
+
+}
+
+function detailWindow(e) {
+    detailDialog.showModal();
+
+}
+
+function ajaxErrorHandler() {
+    console.log("dit gaat niet zo goed")
 }
 
 function hennieTalk() {
 
     const message =
-"Hier vind U informatie over wat U het best eerst kan doen in verschilldende situaties die te maken hebben met Uw veiligheid.";
+        "Hier vind U informatie over wat U het best eerst kan doen in verschilldende situaties " +
+        "die te maken hebben met Uw veiligheid.";
     const delay = 10;
 
     let i = 0;
@@ -49,22 +83,4 @@ function hennieTalk() {
         i++;
         if (i >= message.length) clearInterval(interval);
     }, delay);
-}
-
-function detailWindow(e) {
-    let clickedItem = e.target;
-
-    if (clickedItem.nodeName !== 'BUTTON'){
-        return;
-    }
-
-    detailDialog.showModal();
-
-    let pokemon = pokemonData[clickedItem.dataset.id];
-
-    detailContent.innerHTML= '';
-
-    let title = document.createElement('h1');
-    title.innerHTML = `${pokemon.name} (#${pokemon.id})`;
-    detailContent.appendChild(title);
 }
