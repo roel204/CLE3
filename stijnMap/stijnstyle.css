@@ -7,6 +7,12 @@
 }
 
 .locatieGallery{
+    height: 80%;
+    width: 100%;
+    overflow-y: scroll;
+    direction: ltr;
+    overflow-x: hidden;
+
     background-color: papayawhip;
     max-width: 800px;
     margin: 10px;
@@ -16,6 +22,7 @@
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     justify-items: center;
+
 }
 
 .locatieInfo{

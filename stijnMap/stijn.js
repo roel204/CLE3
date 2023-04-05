@@ -15,6 +15,9 @@ let detailContent;
 
 function init(){
 
+    favoriteLocations = JSON.parse(localStorage.getItem('favoriteStorage')) || [];
+
+    document.addEventListener("click", favoriteClickHandler)
     detailDialog = document.getElementById('location-detail');
     detailContent = detailDialog.querySelector('.modal-content');
     detailDialog.addEventListener('click', detailModalClickHandler);
@@ -41,10 +44,7 @@ function ajaxRequest(url, successHandler)
 
 function ajaxLocationSuccessHandler(data){
 
-    console.log(data)
-
     for (let location of data){
-
 
         let locatieKaartje = document.createElement("div")
         locatieKaartje.classList.add("locatieKaartje")
@@ -58,14 +58,18 @@ function ajaxLocationSuccessHandler(data){
 }
 
 function ajaxLocationDetailSuccessHandler(data){
-    console.log(data)
+
     let locationKaart = document.querySelector(`.locatieKaartje[data-id='${data.id}']`);
 
     locationList[data.id] = data
 
+
+
     let locationName = document.createElement("h2")
     locationName.innerHTML = data.naam
     locationKaart.appendChild(locationName)
+
+    updateFavoriteList()
 }
 
 function ajaxErrorHandler(data) {
@@ -84,6 +88,20 @@ function locationClickHandler(e)
     let location = locationList[clickedItem.dataset.id];
 
     detailContent.innerHTML = '';
+
+    let favoriet = document.createElement("img")
+
+    favoriet.src = "stijnImg/Unfavorite.png"
+    favoriet.dataset.id = location.id
+    favoriet.classList.add("favoriteBtn")
+    favoriet.setAttribute("width", 25)
+    favoriet.setAttribute("height", 25)
+    if (localStorage.getItem('favoriteStorage')?.includes(favoriet.dataset.id)){
+        favoriet.src = "stijnImg/Favorite.png"
+    }else{
+        favoriet.src = "stijnImg/Unfavorite.png"
+    }
+    detailContent.appendChild(favoriet)
 
     let title = document.createElement('h1');
     title.innerHTML = location.naam
@@ -125,14 +143,13 @@ function locationClickHandler(e)
 
     detailDialog.showModal();
     locationGallery.classList.add('dialog-open');
-    console.log(detailContent)
 
 }
 
 function detailModalClickHandler(e)
 {
     if (e.target.nodeName === 'DIALOG' || e.target.nodeName === 'BUTTON') {
-        console.log(detailContent)
+
         detailDialog.close();
         modalcontent.innerHTML = ""
     }
@@ -142,27 +159,35 @@ function detailModalClickHandler(e)
 
 function dialogCloseHandler(e)
 {
-    console.log(detailContent)
+
     locationGallery.classList.remove('dialog-open');
 
 
 }
 
-function updateFavorites(locationId){
-    if (locationId === "yes" || locationId === "no"){
-        if (favoriteLocations[locationId] === "yes"){
-            favoriteLocations[locationId] = "no"
+function favoriteClickHandler(e) {
+
+    if (e.target.classList.contains("favoriteBtn")) {
+        console.log("ër is geklikt")
+        const favoriteBtn = e.currentTarget;
+        if (localStorage.getItem('favoriteStorage')?.includes(e.target.dataset.id)) {
+            favoriteLocations.splice(favoriteLocations.indexOf(e.target.dataset.id), 1);
+            e.target.src = "stijnImg/Unfavorite.png"
         } else {
-            favoriteLocations[locationId] = "yes"
+            favoriteLocations.push(e.target.dataset.id)
+            e.target.src = "stijnImg/Favorite.png"
         }
+        localStorage.setItem('favoriteStorage', JSON.stringify(favoriteLocations));
+        updateFavoriteList()
     }
+}
+
+function updateFavoriteList(){
     favoriteList.innerHTML = ""
-    for (let location of favoriteLocations){
-        if (location === "yes"){
-            let favoriteListItem = document.createElement("li")
-            favoriteListItem.innerHTML = locationList[locationId].naam
-            favoriteList.appendChild(favoriteListItem)
-        }
+    for (let favorite of favoriteLocations){
+        let favoriteListItem = document.createElement("li")
+        favoriteListItem.innerHTML = locationList[favorite].naam
+        favoriteList.appendChild(favoriteListItem)
     }
 }
 
