@@ -9,6 +9,7 @@ body {
     background-size: cover;
     margin: 0;
     position: fixed;
+    cursor: url('../img/hennie.png'), auto;
 }
 
 .pinboard {
@@ -21,15 +22,6 @@ body {
     position: relative;
     width: 90vw;
     height: 80vh;
-}
-
-.pinboardItem {
-    margin: 2vw 2vw 2vw 15vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 15.8vw;
-    cursor: pointer;
 }
 
 .hennie {

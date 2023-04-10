@@ -1,32 +1,27 @@
 window.addEventListener('load', init);
 
-
-let apiUrl = "http://localhost/CLE3/matsMap/veiligheidInZorg.php"
-let jsonData = [];
-let pinboard = document.getElementById("pinboard")
+//Globals
+let apiUrl = 'http://localhost/CLE3/matsMap/veiligheidInZorg.php';
+let pinboard;
+let infoData = {};
 let detailDialog;
 let detailContent;
 
+/**
+ * Initialize after the DOM is ready
+ */
 function init()
 {
     hennieTalk()
 
-    imageUrls = ["matsimg/Ontruiming.png", "matsimg/Pijn.png", "matsimg/Ziekte.png"]
-    dataUrls = ["https://www.google.nl", "https://www.google.nl", "https://www.google.nl"]
-
-    for (let imageUrl of imageUrls) {
-        const image = document.createElement("img");
-        image.src = imageUrl;
-        image.classList.add('pinboardItem')
-        image.addEventListener("click", detailWindow);
-        image.setAttribute("data-url", dataUrls[imageUrls.indexOf(imageUrl)]);
-        pinboard.appendChild(image);
-    }
+    pinboard = document.getElementById('pinboard')
+    pinboard.addEventListener("click", detailWindow);
 
     detailDialog = document.getElementById('detail');
     detailContent = document.querySelector('.modal-content');
+    detailDialog.addEventListener('click', detailModalClickHandler)
 
-    betterCallAjax(apiUrl, getApiItems);
+    betterCallAjax(apiUrl, createHelpCards);
 }
 
 function betterCallAjax(link, succesHandler)
@@ -42,28 +37,118 @@ function betterCallAjax(link, succesHandler)
         .catch(ajaxErrorHandler);
 }
 
-function getApiItems(data)
+function createHelpCards(data)
 {
-    for (let items of data.results) {
-        let pokemonCard = document.createElement('div');
-        pokemonCard.classList.add('ApiItem');
-        pokemonCard.dataset.name = items.name
-        }
+    for (let info of data) {
+        let infoCard = document.createElement('div');
+        infoCard.classList.add('info-card');
+        infoCard.dataset.name = info.title
+        pinboard.appendChild(infoCard);
 
-        betterCallAjax(items.url, fillApiItems);
+        betterCallAjax(info.titleUrl, fillInfoCard);
+    }}
+
+function fillInfoCard(info)
+{
+    console.log(info)
+    let infoCard = document.querySelector(`.info-card[data-name='${info.title}']`);
+    infoCard.classList.add(`${info.catagory}`)
+
+    let title = document.createElement('h3');
+    title.innerHTML = "Onderwerp: " + info.title;
+    infoCard.appendChild(title);
+
+    let catagory = document.createElement('h3');
+    catagory.innerHTML = "Catagorie: " + info.catagory;
+    infoCard.appendChild(catagory)
+
+
+
+    // !!! store pokémon info for later use !!!
+    infoData[info.id] = info;
+}
+
+function detailWindow(e)
+{
+    let clickedItem = e.target;
+
+    if (clickedItem.nodeName !== 'DIV') {
+        return;
     }
 
-function fillApiItems() {
-
-}
-
-function detailWindow(e) {
     detailDialog.showModal();
 
+    let info = infoData[clickedItem.dataset.id];
+
+    detailContent.innerHTML = '';
+
+    let title = document.createElement('h1');
+    title.innerHTML = `${info.title}`
+    detailContent.appendChild(title);
+
+    let source = document.createElement('a');
+    source.innerHTML = info.source
+    detailContent.appendChild(source);
+
+    locationGallery.classList.add('dialog-open');
 }
 
-function ajaxErrorHandler() {
-    console.log("dit gaat niet zo goed")
+function detailModalClickHandler(e)
+{
+    if (e.target.nodeName === 'DIALOG' || e.target.nodeName === 'BUTTON') {
+
+        detailDialog.close();
+        modalcontent.innerHTML = ""
+    }
+}
+
+function dialogCloseHandler(e)
+{
+    locationGallery.classList.remove('dialog-open');
+}
+
+//
+// function detailWindow(e) {
+//     let clickedItem = e.target;
+//
+//     if (clickedItem.nodeName !== 'BUTTON'){
+//         return;
+//     }
+//     detailDialog.showModal();
+//
+//     let info = infoData[clickedItem.dataset.id];
+//
+//     detailContent.innerHTML= '';
+//
+//     let title = document.createElement('h1');
+//     title.innerHTML = `${info.title} (#${info.id})`;
+//     detailContent.appendChild(title);
+//
+//     let image = document.createElement('img');
+//     image.src = pokemon.sprites.other['official-artwork'].front_shiny;
+//     image.classList.add('pokemon-card');
+//     detailContent.appendChild(image);
+//
+//     let types = document.createElement('h3');
+//     if (pokemon.types.length === 2) {
+//         types.innerHTML = pokemon.types['0'].type.name + ' / ' + pokemon.types['1'].type.name;}
+//     if (pokemon.types.length === 1) {
+//         types.innerHTML = pokemon.types['0'].type.name}
+//     detailContent.appendChild(types);
+// }
+//
+// function detailModalClickHandler(e) {
+//     if (e.target.nodeName === 'DIALOG' || e.target.nodeName === 'BUTTON') {
+//         detailDialog.close();
+//         gallery.classList.remove('dialog-open');
+//     }
+// }
+
+function ajaxErrorHandler()
+{
+    let errorMessage = document.createElement('div');
+    errorMessage.classList.add('error');
+    console.log("Er ging iets fout")
 }
 
 function hennieTalk() {

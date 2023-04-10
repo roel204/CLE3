@@ -32,6 +32,29 @@ body {
     cursor: pointer;
 }
 
+.info-card{
+    margin: 5px;
+    width: 180px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border: 5px solid #D8C7AD;
+    cursor: pointer;
+    transform-origin: center;
+}
+
+.Ontruiming {
+    background: #FF0400;
+}
+
+.Pijn {
+    background: #E5D716;
+}
+
+.Ziekte {
+    background: #4CB286;
+}
+
 .hennie {
     width: 35vw;
     position: absolute;

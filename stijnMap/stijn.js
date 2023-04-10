@@ -23,7 +23,7 @@ function init(){
     detailDialog.addEventListener('click', detailModalClickHandler);
     detailDialog.addEventListener('close', dialogCloseHandler);
 
-    locationGallery.addEventListener("click", locationClickHandler)
+
     ajaxRequest(apiUrl, ajaxLocationSuccessHandler)
 
     hennieTalk("welkom bij zorg in de buurt. Klik op jouw de voor jouw gemeente om de dichtsbijzijnde zorglocaties te zien")
@@ -143,7 +143,6 @@ function locationClickHandler(e)
 
     detailDialog.showModal();
     locationGallery.classList.add('dialog-open');
-
 }
 
 function detailModalClickHandler(e)
@@ -153,16 +152,11 @@ function detailModalClickHandler(e)
         detailDialog.close();
         modalcontent.innerHTML = ""
     }
-
-
 }
 
 function dialogCloseHandler(e)
 {
-
     locationGallery.classList.remove('dialog-open');
-
-
 }
 
 function favoriteClickHandler(e) {
